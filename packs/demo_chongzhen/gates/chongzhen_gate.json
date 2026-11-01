@@ -1,0 +1,12 @@
+{
+  "id": "gate_chongzhen",
+  "title": "终局前夕",
+  "era": "明末",
+  "date": "崇祯十七年 · 三月",
+  "description": "京师的城门正在一座一座失去回应。进入工作台，尝试在史实抵达之前留下最后一份记录。",
+  "scenario_id": "scenario_chongzhen_endgame",
+  "story_id": "story_last_edict",
+  "thumbnail": "res://assets/generated/chongzhen_workbench_map.png",
+  "unlock_condition": {"type": "always"},
+  "status": "open"
+}

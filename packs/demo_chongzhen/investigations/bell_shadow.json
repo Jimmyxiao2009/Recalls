@@ -1,0 +1,13 @@
+{
+  "id": "investigation_bell_shadow",
+  "label": "奉先殿钟影",
+  "title": "没有响过的最后一声钟",
+  "position": [0.76, 0.66],
+  "hint": "钟楼没有动，但地上的影子在来回摆。",
+  "description": "你听见一声钟鸣，却找不到声音开始的时刻。影子先摆向西，再回到钟身下；随后同一声钟鸣从更远的地方重复了一遍。两份线索在这里闭合：这不是单纯的残留，而是一段历史正在试图把自己重新播放。",
+  "memory_id": "memory_bell_shadow",
+  "requires_memories": ["memory_unfinished_memorial", "memory_sealed_register"],
+  "phenomenon_id": "phenomenon_bell_echo",
+  "story_id": "story_bell_echo",
+  "story_label": "追入钟声"
+}

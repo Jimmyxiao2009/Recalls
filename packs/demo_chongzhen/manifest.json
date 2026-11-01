@@ -1,0 +1,9 @@
+{
+  "id": "demo_chongzhen",
+  "title": "终局前夕 · 示例内容包",
+  "version": "0.1.0",
+  "author": "History Narrative Engine",
+  "entry_gate": "gate_chongzhen",
+  "entry_scenario": "scenario_chongzhen_endgame",
+  "content_language": "zh-CN"
+}

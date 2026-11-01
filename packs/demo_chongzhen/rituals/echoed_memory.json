@@ -1,0 +1,8 @@
+{
+  "id": "ritual_echoed_memory",
+  "title": "回声中的记忆",
+  "condition": {"type": "memory_unlocked", "memory_id": "memory_last_edict"},
+  "actions": [
+    {"type": "set_flag", "flag_id": "hub_memory_echo_visible", "value": true}
+  ]
+}

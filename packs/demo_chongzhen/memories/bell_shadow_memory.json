@@ -1,0 +1,14 @@
+{
+  "id": "memory_bell_shadow",
+  "title": "未鸣之钟",
+  "subtitle": "声音晚于影子抵达",
+  "date": "甲申 · 夜半",
+  "quote": "影先动，钟后响。",
+  "description": "奉先殿钟影的异常记录。历史残响并非静止保存，而像在主动寻找一次重新发生的机会。",
+  "rarity": "anomaly",
+  "asset": "res://assets/generated/chongzhen_workbench_map.png",
+  "graph_position": [0.72, 0.64],
+  "links": [
+    {"to": "memory_last_edict", "kind": "terminal", "label": "终局回声"}
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "id": "investigation_desk_memorial",
+  "label": "乾清宫案头",
+  "title": "未批完的奏疏",
+  "position": [0.34, 0.46],
+  "hint": "案头压着几份没有朱批的奏疏。",
+  "description": "纸页边缘有被反复翻动的折痕。最后一页只写到“京师不可守”便停了笔。这里没有新的命令，只有一个已经来不及回答的问题。",
+  "memory_id": "memory_unfinished_memorial"
+}

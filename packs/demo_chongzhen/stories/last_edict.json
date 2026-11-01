@@ -1,0 +1,54 @@
+{
+  "id": "story_last_edict",
+  "title": "遗诏",
+  "background_asset": "res://assets/generated/vn_palace_background.png",
+  "portrait_asset": "res://assets/generated/portrait_chongzhen_placeholder.png",
+  "start": "arrival",
+  "nodes": [
+    {
+      "id": "arrival",
+      "speaker": "旁白",
+      "text": "殿外的钟声停了。火光越过宫墙，照见阶前无人拾起的冠。",
+      "commands": [{"type": "fade", "duration": 0.18}],
+      "next": "emperor"
+    },
+    {
+      "id": "emperor",
+      "speaker": "执笔者",
+      "text": "纸还在，印还在。只是这座城，已经不再等待下一道命令。",
+      "commands": [{"type": "show", "target": "portrait", "duration": 0.3}],
+      "next": "edict"
+    },
+    {
+      "id": "edict",
+      "speaker": "执笔者",
+      "text": "若要留下最后一句，它应当写给谁？",
+      "commands": [{"type": "flash", "duration": 0.16}, {"type": "text_flash", "text": "选择权正在减少", "duration": 0.8}],
+      "choices": [
+        {"label": "写给天下", "next": "to_world"},
+        {"label": "写给无人之处", "next": "to_empty"}
+      ]
+    },
+    {
+      "id": "to_world",
+      "speaker": "执笔者",
+      "text": "墨落下去，像一扇门在很远的地方合上。",
+      "commands": [{"type": "wait", "duration": 0.24}],
+      "next": "ending"
+    },
+    {
+      "id": "to_empty",
+      "speaker": "执笔者",
+      "text": "没有人应答。也许历史只记录那些没有被问过的答案。",
+      "commands": [{"type": "wait", "duration": 0.24}],
+      "next": "ending"
+    },
+    {
+      "id": "ending",
+      "speaker": "旁白",
+      "text": "这一夜没有胜者。你只替一段已经发生的历史，保留了最后的回声。",
+      "commands": [{"type": "phenomenon", "id": "phenomenon_final_intrusion"}, {"type": "award_memory", "memory_id": "memory_last_edict"}, {"type": "set_flag", "flag_id": "story_last_edict_complete"}],
+      "end": true
+    }
+  ]
+}

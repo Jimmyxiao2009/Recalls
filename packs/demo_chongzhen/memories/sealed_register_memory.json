@@ -1,0 +1,14 @@
+{
+  "id": "memory_sealed_register",
+  "title": "先于今日封存的名册",
+  "subtitle": "时间顺序出现了裂口",
+  "date": "日期存疑",
+  "quote": "封条写着今日，墨却像数日前便已干透。",
+  "description": "司礼监封匣中的名册。部分页码被整齐割走，而封存时间与纸墨状态彼此矛盾。",
+  "rarity": "anomaly",
+  "asset": "res://assets/generated/chongzhen_workbench_map.png",
+  "graph_position": [0.48, 0.36],
+  "links": [
+    {"to": "memory_bell_shadow", "kind": "resonance", "label": "回声源"}
+  ]
+}

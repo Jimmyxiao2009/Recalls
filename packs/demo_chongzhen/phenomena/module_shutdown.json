@@ -1,0 +1,10 @@
+{
+  "id": "phenomenon_module_shutdown",
+  "title": "模块熄灭",
+  "steps": [
+    {"channel": "ui", "effect": "module_shutdown", "duration": 0.18},
+    {"channel": "shader", "effect": "desaturate", "strength": 0.35, "duration": 0.32},
+    {"channel": "scene_overlay", "effect": "noise", "strength": 0.25, "duration": 0.35},
+    {"channel": "text", "effect": "text_flash", "text": "规则已被改写", "duration": 0.7}
+  ]
+}

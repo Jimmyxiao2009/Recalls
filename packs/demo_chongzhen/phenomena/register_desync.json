@@ -1,0 +1,7 @@
+{
+  "id": "phenomenon_register_desync",
+  "title": "封存日期错位",
+  "takeover": "overlay",
+  "module": "res://packs/demo_chongzhen/anomalies/register_desync.gd",
+  "description": "司礼监封匣的专属异象：日期顺序短暂错位，UI 被历史残响截获。"
+}

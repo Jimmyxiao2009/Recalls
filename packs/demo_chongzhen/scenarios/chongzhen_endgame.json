@@ -1,0 +1,93 @@
+{
+  "id": "scenario_chongzhen_endgame",
+  "title": "终局前夕",
+  "display_title": "崇祯终局",
+  "era": "明末",
+  "date": "崇祯十七年 · 三月十九日 · 夜半",
+  "map_asset": "res://assets/generated/chongzhen_workbench_map.png",
+  "vn_background": "res://assets/generated/vn_palace_background.png",
+  "portrait_asset": "res://assets/generated/portrait_chongzhen_placeholder.png",
+  "investigation_ids": [
+    "investigation_desk_memorial",
+    "investigation_sealed_register",
+    "investigation_bell_shadow"
+  ],
+  "initial_report": {
+    "title": "城东急报",
+    "body": "外城火势再起。守军请求调拨最后一批火药，朝门仍未开启。",
+    "time": "23:47",
+    "status": "危"
+  },
+  "report_actions": [
+    {"id": "dispatch", "label": "调兵增援东门", "cost": "耗粮 1,200"},
+    {"id": "hold", "label": "稳守内城防线", "cost": "耗银 800"},
+    {"id": "council", "label": "召集最后朝议", "cost": "可能触发异象", "phenomenon_id": "phenomenon_module_shutdown"}
+  ],
+  "objective": {
+    "mode": "investigation",
+    "title": "确认宫中三处异常",
+    "detail": "在地图中调查 ◆ 标记，收集 Memory",
+    "target_count": 3,
+    "days": "今夜",
+    "complete_text": "三处异常已闭合 · 钟声回路已开放",
+    "completion": {
+      "flag_id": "objective_investigation_chain_complete",
+      "message": "三处异常形成了同一条时间回声。奉先殿的钟声现在可以被追入。",
+      "flash_text": "TRACE CHAIN COMPLETE"
+    }
+  },
+  "resources": [
+    {"id": "treasury", "label": "国库", "value": "9.8 万两", "delta": "-12%"},
+    {"id": "grain", "label": "粮草", "value": "2.6 万石", "delta": "-8%"},
+    {"id": "army", "label": "在京军力", "value": "3.1 万", "delta": "↓"},
+    {"id": "gates", "label": "城门守备", "value": "3 / 9", "delta": "警戒"},
+    {"id": "people", "label": "民心", "value": "38 / 100", "delta": "危"}
+  ],
+  "tabs": ["兵事", "财政", "朝议", "宫禁", "城况", "密报"],
+  "administration": [
+    {"id": "ministry_war", "label": "兵部", "role": "京师防务 · 调兵", "status": "warning", "portrait": "portrait_chongzhen_placeholder"},
+    {"id": "ministry_revenue", "label": "户部", "role": "筹饷 · 度支", "status": "strained", "portrait": "portrait_chongzhen_placeholder"},
+    {"id": "grand_secretariat", "label": "内阁", "role": "诏令 · 用人", "status": "active", "portrait": "portrait_chongzhen_placeholder"},
+    {"id": "censorate", "label": "都察院", "role": "纠劾 · 查案", "status": "active", "portrait": "portrait_chongzhen_placeholder"},
+    {"id": "military_command", "label": "五军都督府", "role": "禁军 · 守备", "status": "active", "portrait": "portrait_chongzhen_placeholder"},
+    {"id": "palace_office", "label": "司礼监", "role": "宫中要务", "status": "active", "portrait": "portrait_chongzhen_placeholder"}
+  ],
+  "people": [
+    {"id": "figure_a", "name": "范景文", "role": "京师督师", "loyalty": 68},
+    {"id": "figure_b", "name": "李国桢", "role": "内臣 · 守城", "loyalty": 52},
+    {"id": "figure_c", "name": "周遇吉", "role": "关宁总兵", "loyalty": 41},
+    {"id": "figure_d", "name": "曹化淳", "role": "司礼监秉笔", "loyalty": 59}
+  ],
+  "modules": [
+    {"id": "military", "label": "兵事", "icon": "⚔", "description": "三大营溃散。城门军报互相冲突。", "action": "核验军报", "status_rules": [{"at": 0, "status": "active"}, {"at": 60, "status": "warning"}, {"at": 80, "status": "disabled"}]},
+    {"id": "treasury", "label": "财政", "icon": "¤", "description": "饷银不足。内帑封条已被开启。", "action": "征发帑银", "status_rules": [{"at": 0, "status": "active"}, {"at": 40, "status": "disabled"}]},
+    {"id": "court", "label": "朝议", "icon": "卷", "description": "南迁之议已迟。群臣仍候最后一道诏。", "action": "进入朝议", "phenomenon_id": "phenomenon_module_shutdown", "status_rules": [{"at": 0, "status": "active"}, {"at": 60, "status": "warning"}, {"at": 100, "status": "disabled"}]} ,
+    {"id": "palace", "label": "宫禁", "icon": "宫", "description": "宫门尚可回应，但钥匙正在离开。", "action": "查验宫门", "status_rules": [{"at": 0, "status": "active"}, {"at": 80, "status": "locked"}]},
+    {"id": "city", "label": "城况", "icon": "城", "description": "外城火线后移。内城仍有一线灯火。", "action": "巡视城防", "status_rules": [{"at": 0, "status": "active"}, {"at": 80, "status": "warning"}, {"at": 100, "status": "disabled"}]}
+  ],
+  "map_markers": [
+    {"label": "德胜门 · 失守", "kind": "enemy", "position": [0.18, 0.34]},
+    {"label": "安定门 · 火势", "kind": "enemy", "position": [0.48, 0.20]},
+    {"label": "东直门 · 涌寇", "kind": "enemy", "position": [0.76, 0.36]},
+    {"label": "内城禁军 · 3,500", "kind": "ally", "position": [0.52, 0.66]},
+    {"label": "煤山 · 待命", "kind": "objective", "position": [0.73, 0.72]}
+  ],
+  "progress_events": [
+    {"at": 20, "message": "第一道军报失去回音。外城守备进入警戒。", "phenomenon": "phenomenon_module_shutdown", "patch_id": "patch_lock_treasury"},
+    {"at": 40, "message": "户部封存。国家机器开始拒绝调用。", "phenomenon": "phenomenon_module_shutdown", "patch_id": "patch_lock_revenue"},
+    {"at": 60, "message": "朝议没有形成决议。部分机构只剩下名称。", "phenomenon": "phenomenon_module_shutdown", "patch_id": "patch_capture_ui"},
+    {"at": 80, "message": "外城战线崩溃。宫门与兵事退出可操作范围。", "phenomenon": "phenomenon_module_shutdown", "patch_id": "patch_lock_palace"},
+    {"at": 100, "message": "系统只留下最后两条路径：遗诏，自缢。", "phenomenon": "phenomenon_final_intrusion", "patch_id": "patch_final_only"}
+  ],
+  "rule_patches": [
+    {"id": "patch_lock_treasury", "kind": "disable_target", "target": "treasury", "description": "封存户部"},
+    {"id": "patch_lock_revenue", "kind": "disable_target", "target": "treasury", "description": "国库拒绝调用"},
+    {"id": "patch_capture_ui", "kind": "capture_ui", "target": "main_ui", "description": "历史接管部分选择权"},
+    {"id": "patch_lock_palace", "kind": "disable_target", "target": "palace", "description": "宫门不再回应"},
+    {"id": "patch_final_only", "kind": "disable_target", "target": "advance_history", "description": "时间不再向前推进"}
+  ],
+  "final_actions": [
+    {"id": "edict", "label": "遗诏", "description": "留下最后一份文字", "story_id": "story_last_edict"},
+    {"id": "suicide", "label": "自缢", "description": "接受不可撤回的终点", "story_id": "story_last_edict"}
+  ]
+}

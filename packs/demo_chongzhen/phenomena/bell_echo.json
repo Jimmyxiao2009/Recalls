@@ -1,0 +1,7 @@
+{
+  "id": "phenomenon_bell_echo",
+  "title": "未鸣钟回声",
+  "takeover": "sequence",
+  "module": "res://packs/demo_chongzhen/anomalies/bell_echo.gd",
+  "description": "奉先殿钟影的专属异象：同一声钟从不同时间重复抵达。"
+}

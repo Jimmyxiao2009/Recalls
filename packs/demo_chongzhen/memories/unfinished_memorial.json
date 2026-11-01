@@ -1,0 +1,14 @@
+{
+  "id": "memory_unfinished_memorial",
+  "title": "未竟奏疏",
+  "subtitle": "一句没有等到朱批的话",
+  "date": "甲申 · 三月十九",
+  "quote": "京师不可守……",
+  "description": "乾清宫案头留下的未竟奏疏。文字停止的位置比内容本身更像一个答案。",
+  "rarity": "trace",
+  "asset": "res://assets/generated/vn_palace_background.png",
+  "graph_position": [0.20, 0.64],
+  "links": [
+    {"to": "memory_sealed_register", "kind": "evidence", "label": "时间矛盾"}
+  ]
+}

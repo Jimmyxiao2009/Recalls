@@ -1,0 +1,10 @@
+{
+  "id": "investigation_sealed_register",
+  "label": "司礼监封匣",
+  "title": "被提前封存的名册",
+  "position": [0.60, 0.42],
+  "hint": "朱漆封匣上的纸签比周围灰尘更新。",
+  "description": "名册上的名字没有被涂去，却有几页被整齐割走。封条写着今日日期，但墨迹已经干透得像数日前留下。你第一次明确感觉到：这里的时间并不完全按顺序发生。",
+  "memory_id": "memory_sealed_register",
+  "phenomenon_id": "phenomenon_register_desync"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "story_bell_echo",
+  "title": "钟声之后",
+  "background_asset": "res://assets/generated/vn_palace_background.png",
+  "portrait_asset": "res://assets/generated/portrait_chongzhen_placeholder.png",
+  "return_route": "workbench",
+  "return_label": "返回终局工作台",
+  "start": "first_echo",
+  "nodes": [
+    {"id": "first_echo", "speaker": "旁白", "text": "钟声散去以后，你才发现殿门一直是关着的。没有人撞钟，也没有风。", "commands": [{"type": "fade", "duration": 0.18}], "next": "shadow"},
+    {"id": "shadow", "speaker": "执笔者", "text": "可影子动了三次。第一次对应刚才，第二次对应更远处，第三次没有对应任何已经发生的时刻。", "commands": [{"type": "text_flash", "text": "MEMORY / 时间序列不闭合", "duration": 0.8}], "next": "question"},
+    {"id": "question", "speaker": "执笔者", "text": "如果历史真的只会发生一次，那第三次回声是从哪里来的？", "choices": [{"label": "来自尚未发生的时间", "next": "answer_future"}, {"label": "来自被遗忘的另一条时间", "next": "answer_lost"}]},
+    {"id": "answer_future", "speaker": "旁白", "text": "你把这句话写进记录。纸上的墨迹短暂地向上爬了一小截，又恢复正常。", "commands": [{"type": "set_flag", "flag_id": "bell_theory:future"}], "next": "ending"},
+    {"id": "answer_lost", "speaker": "旁白", "text": "你把这句话写进记录。远处的火光忽然暗了一瞬，像有什么东西接受了这个称呼。", "commands": [{"type": "set_flag", "flag_id": "bell_theory:lost"}], "next": "ending"},
+    {"id": "ending", "speaker": "执笔者", "text": "记录完成。异象没有消失，只是暂时退回了历史背面。", "commands": [{"type": "set_flag", "flag_id": "story_bell_echo_complete"}], "end": true}
+  ]
+}

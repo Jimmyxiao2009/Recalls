@@ -1,0 +1,12 @@
+{
+  "id": "phenomenon_final_intrusion",
+  "title": "历史接管",
+  "takeover": "world",
+  "module": "res://packs/demo_chongzhen/anomalies/final_intrusion.gd",
+  "description": "崇祯终局的专属异象。它不是通用特效模板，而是数据包自带的规则接管模块。",
+  "fallback_steps": [
+    {"channel": "camera", "effect": "shake", "strength": 5.0, "duration": 0.32},
+    {"channel": "shader", "effect": "desaturate", "strength": 0.72, "duration": 0.6},
+    {"channel": "text", "effect": "text_flash", "text": "城已破 · 不可撤回", "duration": 1.1}
+  ]
+}
